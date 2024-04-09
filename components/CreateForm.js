@@ -1,6 +1,6 @@
 'use client'
 
-// import { addContact } from '@/lib/action'
+import { addContact } from '@/lib/action'
 import React from 'react'
 import Input from './Input'
 
@@ -8,15 +8,15 @@ const CreateForm = () => {
   return (
     <div>
         <form
-        // action={addContact}
-        className='bg-gray-100 items-center p-2  rounded'
+        action={addContact}
+        className='bg-gray-100 items-center p-2 rounded'
         >
         <div className='flex mb-4'>
             <div className='w-1/2 pr-2'>
                 <label className='text-gray-700'>FirstName</label>
                 <Input
                  type='text'
-                 placeholder="FirstName"
+                 placeholder="First Name"
                  name='firstName'
                 />
             </div>
@@ -24,7 +24,7 @@ const CreateForm = () => {
                 <label className='text-gray-700'>LastName</label>
                 <Input
                  type='text'
-                 placeholder="LastName"
+                 placeholder="Last Name"
                  name='lastName'
                 />
             </div>
