@@ -1,13 +1,13 @@
 import HeadingText from '@/components/HeadingText'
 import Navbar from '@/components/Navbar'
-// import { deleteContact } from '@/lib/action'
-// import { getContacts } from '@/lib/data'
+import { deleteContact } from '@/lib/action'
+import { getContacts } from '@/lib/data'
 import Link from 'next/link'
 import React from 'react'
-// import {FiTrash, FiEdit} from "react-icons/fi"
+import {FiTrash, FiEdit} from "react-icons/fi"
 
 const HomePage = async  () => {
-  // const contacts = await getContacts()
+  const contacts = await getContacts()
 
   return (
     <main>
@@ -49,14 +49,14 @@ const HomePage = async  () => {
             </tr>
           </thead>
           <tbody>
-            {/* {
+            {
               contacts.map((contact) => (
                 <tr key={contact.id}>
                   <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.firstName}</td>
                   <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.lastName}</td>
                   <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.email}</td>
                   <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.phone}</td>
-                  <td className='border-t-2 text-center border-gray-200 px-4 py-3 flex items-center gap-1'>
+                  <td className='border-t-2 text-center border-gray-200 px-4 py-3 flex items-center justify-center gap-1'>
                   <Link href={`contact/${contact.id}`}>
                     <FiEdit />
                   </Link>
@@ -64,17 +64,17 @@ const HomePage = async  () => {
                   action={deleteContact}
                   >
                     <input hidden name='id' value={contact.id} />
-                  <button
-                  type='submit'
-                  className='mt-2'
-                  >
-                  <FiTrash style={{color: 'red'}} />
-                  </button>
+                    <button
+                    type='submit'
+                    className='mt-2'
+                    >
+                    <FiTrash style={{color: 'red'}} />
+                    </button>
                   </form>
                   </td>
                 </tr>
               ))
-            } */}
+            }
           </tbody>
         </table>
       </div>

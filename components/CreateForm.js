@@ -9,7 +9,7 @@ const CreateForm = () => {
     <div>
         <form
         action={addContact}
-        className='bg-gray-100 items-center p-2 rounded'
+        className='flex flex-col bg-gray-100 items-center p-2 rounded'
         >
         <div className='flex mb-4'>
             <div className='w-1/2 pr-2'>
